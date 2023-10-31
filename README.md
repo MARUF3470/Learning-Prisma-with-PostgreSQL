@@ -1,4 +1,4 @@
-# Heading1 Learning Prisma with PostgreSQL
+# Learning Prisma with PostgreSQL
 
 <br> <br>
 
@@ -14,10 +14,17 @@
 <br> <br>
 ---
 
-\*\* const { PrismaClient } = require("@prisma/client");
+\*\*
 
+### Example:
+
+ <br>
+const { PrismaClient } = require("@prisma/client");
+<br>
 const prisma = new PrismaClient({
+<br>
 log: ['query'] // to see which query is hitted
+<br>
 })
 \*\*
 
@@ -36,13 +43,16 @@ log: ['query'] // to see which query is hitted
 ---
 
 <br> <br>
-Ex:
-model User {
-id Int @id @default(autoincrement())
-name String? // using ? after datatype, defines it can be passed in the database or not
-email String @unique
-password String?
-created_at DateTime @default(now())
+
+### Example:
+
+ <br>
+model User { <br>
+id Int @id @default(autoincrement())  <br>
+name String? // using ? after datatype, defines it can be passed in the database or not  <br>
+email String @unique  <br>
+password String?  <br>
+created_at DateTime @default(now())  <br>
 }
 
 ---
